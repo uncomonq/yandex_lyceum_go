@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"sort"
 )
 
@@ -19,4 +20,10 @@ func permute(prefix, suffix string, result *[]string) {
 	for i := 0; i < len(suffix); i++ {
 		permute(prefix+string(suffix[i]), suffix[:i]+suffix[i+1:], result)
 		}
-	}
+}
+
+func main() {
+	var str string
+	fmt.Scanln(&str)
+	fmt.Println(Permutations(str))
+}
