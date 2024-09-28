@@ -23,6 +23,8 @@ func permute(prefix, suffix string, result *[]string) {
 }
 
 func main() {
+	a := 10
+	a += 10
 	var str string
 	fmt.Scanln(&str)
 	fmt.Println(Permutations(str))
