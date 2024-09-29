@@ -1,31 +1,13 @@
-package main
+package main 
 
-import (
-	"fmt"
-	"sort"
-)
-
-func Permutations(input string) []string {
-	result := []string{}
-	permute("", input, &result)
-	sort.Strings(result)
-	return result
-}
-
-func permute(prefix, suffix string, result *[]string) {
-	if len(suffix) == 0 {
-		*result = append(*result, prefix)
-		return
-	}
-	for i := 0; i < len(suffix); i++ {
-		permute(prefix+string(suffix[i]), suffix[:i]+suffix[i+1:], result)
-		}
-}
+import "fmt"
 
 func main() {
-	a := 10
-	a += 10
-	var str string
-	fmt.Scanln(&str)
-	fmt.Println(Permutations(str))
+    var a int
+    fmt.Scan(&a)
+    if a / 100 == a % 10 / 10 && a / 100 == a % 10 {
+        fmt.Print("NO")
+    } else {
+        fmt.Print("YES")
+    }
 }
